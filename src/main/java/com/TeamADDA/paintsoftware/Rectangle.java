@@ -10,9 +10,19 @@ package com.TeamADDA.paintsoftware;
  */
 // Rectangle Class extending Shape
 class Rectangle extends Shape {
+    Point topLeft;
+    int width;
+    int height;
+
+    public Rectangle(Point topLeft, int width, int height) {
+        this.topLeft = topLeft;
+        this.width = width;
+        this.height = height;
+    }
+    
     @Override
-    public void draw() {
-        System.out.println("Drawing Rectangle");
+ public void draw() {
+        System.out.println("Drawing Rectangle at top-left corner " + topLeft + " with width " + width + " and height " + height);
     }
 
     @Override

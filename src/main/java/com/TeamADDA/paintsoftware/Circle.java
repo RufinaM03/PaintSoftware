@@ -10,9 +10,9 @@ package com.TeamADDA.paintsoftware;
  */
 class Circle extends Shape {
      float radius;
-     int center;
+     Point center;
 
-    public Circle(float radius, int center) {
+    public Circle(float radius, Point center) {
         this.radius = radius;
         this.center = center;
     }
@@ -25,7 +25,7 @@ class Circle extends Shape {
         return 2 * Math.PI * radius;
     }
 
-    public void setCenter(int center) {
+    public void setCenter(Point center) {
         this.center = center;
     }
 

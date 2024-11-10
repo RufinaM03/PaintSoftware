@@ -8,11 +8,27 @@ package com.TeamADDA.paintsoftware;
  *
  * @author rufin
  */
+import java.util.List;
+import java.util.ArrayList;
 // Polygon Class extending Shape
 class Polygon extends Shape {
+   List<Point> vertices;
+
+    public Polygon() {
+        this.vertices = new ArrayList<>();
+    }
+
+    public void addVertex(Point point) {
+        vertices.add(point);
+    }
+
     @Override
     public void draw() {
-        System.out.println("Drawing Polygon");
+        System.out.print("Drawing Polygon with vertices: ");
+        for (Point vertex : vertices) {
+            System.out.print(vertex + " ");
+        }
+        System.out.println();
     }
 
     @Override

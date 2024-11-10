@@ -11,9 +11,12 @@ package com.TeamADDA.paintsoftware;
 
 public class Paint_Software {
     public static void main(String[] args) {
+        // Create points
+        Point centerPoint = new Point(50, 50);
+        Point topLeftPoint = new Point(10, 20);
         // Create instances of shapes
-        Circle circle = new Circle(5.0f, 10);
-        Rectangle rectangle = new Rectangle();
+        Circle circle = new Circle(5.0f, centerPoint);
+        Rectangle rectangle = new Rectangle(topLeftPoint, 100, 50);
         Polygon polygon = new Polygon();
 
         // Use shapes
@@ -22,6 +25,13 @@ public class Paint_Software {
         System.out.println("Area of circle: " + circle.area(circle.radius));
 
         rectangle.draw();
+        
+        // Create a polygon and add vertices
+        polygon.addVertex(new Point(0, 0));
+        polygon.addVertex(new Point(10, 0));
+        polygon.addVertex(new Point(10, 10));
+        polygon.addVertex(new Point(0, 10));
+
         polygon.draw();
 
         // Create Window and handle event
@@ -30,6 +40,14 @@ public class Paint_Software {
         window.display();
         window.handleEvent();
 
-        
+         // Create a Frame
+        Frame mainFrame = new Frame("Main Application Window", 800, 600);
+        mainFrame.display();
+        mainFrame.maximize();
+
+        // Create an Event
+        Point clickPosition = new Point(150, 300);
+        Event clickEvent = new Event("click", clickPosition, System.currentTimeMillis());
+        clickEvent.displayEventInfo();
     }
 }
