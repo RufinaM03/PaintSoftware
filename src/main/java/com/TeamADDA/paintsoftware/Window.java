@@ -29,4 +29,11 @@ class Window {
     public void handleEvent() {
         System.out.println("Handling Event");
     }
+    // Method to create and interact with a DialogBox
+    public void openDialogBox() {
+        DialogBox dialogBox = new DialogBox();
+        dialogBox.open();  // Calls overridden open method in DialogBox
+        dialogBox.display();  // Calls overridden display method in DialogBox
+        dialogBox.showDialogMessage("Welcome to the Dialog Box!");  // Specific method of DialogBox
+    }
 }

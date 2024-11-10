@@ -39,6 +39,7 @@ public class Paint_Software {
         window.open();
         window.display();
         window.handleEvent();
+        window.openDialogBox();
 
          // Create a Frame
         Frame mainFrame = new Frame("Main Application Window", 800, 600);
