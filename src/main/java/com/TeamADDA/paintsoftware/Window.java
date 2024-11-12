@@ -35,5 +35,21 @@ class Window {
         dialogBox.open();  // Calls overridden open method in DialogBox
         dialogBox.display();  // Calls overridden display method in DialogBox
         dialogBox.showDialogMessage("Welcome to the Dialog Box!");  // Specific method of DialogBox
+        DialogBox.openDataController();
     }
+   // Method to create and interact with DrawingContext
+    public void manageDrawingContext() {
+        DrawingContext drawingContext = new DrawingContext();
+        // Create and interact with DrawingContext methods here
+
+        drawingContext.setPoint(150, 250);  // Example of setting a point
+
+        // Display the dimensions of the drawing area
+        System.out.println("Drawing Area Dimensions: " + 
+                            drawingContext.getHorizontalSize() + "x" + 
+                            drawingContext.getVerticalSize());
+
+        // Clear the screen (for example, when closing the window)
+        drawingContext.clearScreen();  // Clears the drawing context
+    }
 }

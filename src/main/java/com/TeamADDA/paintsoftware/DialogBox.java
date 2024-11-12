@@ -50,4 +50,12 @@ class DialogBox extends Window {
     public void showDialogMessage(String message) {
         System.out.println("Dialog Message: " + message);
     }
+    // Method to create and interact with a DataController
+    public void openDataController() {
+        DataController dataController = new DataController();
+        dataController.open();           // Calls overridden open method in DataController
+        dataController.manageData();     // Specific method of DataController
+        dataController.validateData();   // Validates data in DataController
+        dataController.close();          // Calls overridden close method in DataController
+    }
 }

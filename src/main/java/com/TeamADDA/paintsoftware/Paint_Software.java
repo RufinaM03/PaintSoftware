@@ -50,5 +50,6 @@ public class Paint_Software {
         Point clickPosition = new Point(150, 300);
         Event clickEvent = new Event("click", clickPosition, System.currentTimeMillis());
         clickEvent.displayEventInfo();
+        window.manageDrawingContext();
     }
 }
