@@ -40,6 +40,8 @@ public class Paint_Software {
         window.display();
         window.handleEvent();
         window.openDialogBox();
+        window.openConsoleWindow();
+        window.manageDrawingContext();
 
          // Create a Frame
         Frame mainFrame = new Frame("Main Application Window", 800, 600);
@@ -50,6 +52,5 @@ public class Paint_Software {
         Point clickPosition = new Point(150, 300);
         Event clickEvent = new Event("click", clickPosition, System.currentTimeMillis());
         clickEvent.displayEventInfo();
-        window.manageDrawingContext();
     }
 }

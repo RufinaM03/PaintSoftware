@@ -36,7 +36,16 @@ class Window {
         dialogBox.display();  // Calls overridden display method in DialogBox
         dialogBox.showDialogMessage("Welcome to the Dialog Box!");  // Specific method of DialogBox
         DialogBox.openDataController();
-    }
+    }
+
+    // Method to create and interact with a ConsoleWindow
+    public void openConsoleWindow() {
+        ConsoleWindow consoleWindow = new ConsoleWindow();
+        consoleWindow.open();  // Calls overridden open method in ConsoleWindow
+        consoleWindow.display();  // Calls overridden display method in ConsoleWindow
+        consoleWindow.showConsoleLogs();  // Specific method of ConsoleWindow
+    }
+
    // Method to create and interact with DrawingContext
     public void manageDrawingContext() {
         DrawingContext drawingContext = new DrawingContext();

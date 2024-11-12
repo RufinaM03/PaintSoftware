@@ -1,3 +1,5 @@
+
+package com.TeamADDA.paintsoftware;
 class DrawingContext {
     
     // Method to set a point in the drawing context
