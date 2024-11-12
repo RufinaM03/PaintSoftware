@@ -34,7 +34,7 @@ public class Paint_Software {
 
         polygon.draw();
 
-        // Create Window and handle event
+        // Create Window and handle events
         Window window = new Window();
         window.open();
         window.display();
